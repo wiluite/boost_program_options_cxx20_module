@@ -124,7 +124,7 @@
       <ModuleOutputFile>$(BmiCacheDir)$(ProjectName).ifc</ModuleOutputFile>
       <DisableSpecificWarnings>5244</DisableSpecificWarnings>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>E:\install\new_std_dir\inc;.;$(ProjectDir)..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(ProjectDir)..</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalBMIDirectories>$(BmiCacheDir)</AdditionalBMIDirectories>
