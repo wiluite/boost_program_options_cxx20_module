@@ -277,10 +277,17 @@ class basic_string;
 typedef basic_string <char>   string;
 typedef basic_string<wchar_t> wstring;
 
+#ifndef PROGRAM_OPTIONS_MODULE
 static const std::size_t ADP_nodes_per_block    = 256u;
 static const std::size_t ADP_max_free_blocks    = 2u;
 static const std::size_t ADP_overhead_percent   = 1u;
 static const std::size_t ADP_only_alignment     = 0u;
+#else
+inline const std::size_t ADP_nodes_per_block = 256u;
+inline const std::size_t ADP_max_free_blocks = 2u;
+inline const std::size_t ADP_overhead_percent = 1u;
+inline const std::size_t ADP_only_alignment = 0u;
+#endif
 
 template < class T
          , std::size_t NodesPerBlock   = ADP_nodes_per_block
@@ -295,7 +302,12 @@ template < class T
          , unsigned int AllocationDisableMask = 0>
 class allocator;
 
+#ifndef PROGRAM_OPTIONS_MODULE
 static const std::size_t NodeAlloc_nodes_per_block = 256u;
+#else
+inline const std::size_t NodeAlloc_nodes_per_block = 256u;
+//#define NodeAlloc_nodes_per_block 256u 
+#endif
 
 template
    < class T
@@ -332,7 +344,11 @@ struct ordered_range_t
 
 //! Value used to tag that the input range is
 //! guaranteed to be ordered
+#ifndef PROGRAM_OPTIONS_MODULE
 static const ordered_range_t ordered_range = ordered_range_t();
+#else
+inline const ordered_range_t ordered_range = ordered_range_t();
+#endif
 
 //! Type used to tag that the input range is
 //! guaranteed to be ordered and unique
@@ -342,7 +358,11 @@ struct ordered_unique_range_t
 
 //! Value used to tag that the input range is
 //! guaranteed to be ordered and unique
+#ifndef PROGRAM_OPTIONS_MODULE
 static const ordered_unique_range_t ordered_unique_range = ordered_unique_range_t();
+#else
+inline const ordered_unique_range_t ordered_unique_range = ordered_unique_range_t();
+#endif
 
 //! Type used to tag that the inserted values
 //! should be default initialized
@@ -351,7 +371,11 @@ struct default_init_t
 
 //! Value used to tag that the inserted values
 //! should be default initialized
+#ifndef PROGRAM_OPTIONS_MODULE
 static const default_init_t default_init = default_init_t();
+#else
+inline const default_init_t default_init = default_init_t();
+#endif
 #ifndef BOOST_CONTAINER_DOXYGEN_INVOKED
 
 //! Type used to tag that the inserted values
@@ -361,7 +385,11 @@ struct value_init_t
 
 //! Value used to tag that the inserted values
 //! should be value initialized
+#ifndef PROGRAM_OPTIONS_MODULE
 static const value_init_t value_init = value_init_t();
+#else
+inline const value_init_t value_init = value_init_t();
+#endif
 
 namespace container_detail_really_deep_namespace {
 
