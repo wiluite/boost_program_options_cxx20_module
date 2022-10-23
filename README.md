@@ -1,5 +1,7 @@
 # boost_program_options_cxx20_module
 
+(under construction)  
+
 Коротко:
 1. OS Windows, Visual Studio 2022 17.2 (и выше) PREVIEW.
 2. Boost 1.80

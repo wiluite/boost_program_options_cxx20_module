@@ -2,10 +2,6 @@ module;
 
 #include "program_options-module.h"
 
-#define BOOST_PROGRAM_OPTIONS_NO_LIB
-#define PROGRAM_OPTIONS_MODULE
-
-
 export module program_options;
 
 #ifdef _MSC_VER
@@ -22,7 +18,22 @@ export  {
 #include <boost/program_options/option.hpp>
 #include <boost/program_options/value_semantic.hpp>
 #include <boost/program_options/version.hpp>
+
+    namespace boost {
+        namespace detail {
+            template< class CharT // a result of widest_char transformation
+                , class Traits
+                , bool RequiresStringbuffer
+                , std::size_t CharacterBufferSize
+            >
+            class lexical_istream_limited_src;
+        }
+    }
 }
+
+BOOST_NORETURN void boost::throw_exception(std::exception const&) {}
+BOOST_NORETURN void boost::throw_exception(std::exception const& e, boost::source_location const& loc) {}
+
 
 module :private;
 

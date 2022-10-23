@@ -1,4 +1,10 @@
-﻿#pragma once
+#pragma once
+
+#define BOOST_PROGRAM_OPTIONS_NO_LIB
+#define BOOST_ALL_NO_LIB
+#define PROGRAM_OPTIONS_MODULE
+#define BOOST_NO_EXCEPTIONS
+
 
 #include <algorithm>
 #include <any>
@@ -32,3 +38,6 @@
 #include <unordered_map>
 #include <variant>
 #include <vector>
+
+#include <fstream>
+
