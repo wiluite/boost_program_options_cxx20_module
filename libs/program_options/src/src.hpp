@@ -5,7 +5,6 @@
 #include "cmdline.cpp"
 #include "options_description.cpp"
 #include "positional_options.cpp"
-#include "utf8_codecvt_facet.cpp"
 #include "convert.cpp"
 #include "parsers.cpp"
 #include "variables_map.cpp"

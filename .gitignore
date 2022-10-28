@@ -1,3 +1,7 @@
 program_options/.vs
 program_options/x64
 program_options/program_options.vcxproj.user
+.vs
+x64
+boost.program_options.vcxproj.user
+*.user
