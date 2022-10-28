@@ -1,5 +1,7 @@
 // test_app.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+// Modularization approach (and this particular code)
+// are borrowed from (and inpired by) D.Engerts's presentation at CppCon 2022.
 
 import boost.program_options;
 #include <tuple>
