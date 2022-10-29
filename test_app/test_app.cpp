@@ -9,13 +9,13 @@ import boost.program_options;
 
 namespace po = boost::program_options;
 
-
 po::variables_map parseOptions();
 
 auto getOptions() {
 	const auto Option = parseOptions();
 	return std::tuple{ Option["media"].as<std::string>(),
-					   Option["server"].as<std::string>() };
+					   Option["server"].as<std::string>(),
+	};
 }
 
 auto parseCommandline(po::options_description& opts, po::positional_options_description& popts) -> po::variables_map
