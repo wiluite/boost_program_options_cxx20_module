@@ -1,5 +1,5 @@
 // Modularization approach (and this particular code)
-// are borrowed from (and inpired by) D.Engerts's presentation at CppCon 2022.
+// are borrowed from (and inpired by) D.Engert's presentation at CppCon 2022.
 //
 
 module;
